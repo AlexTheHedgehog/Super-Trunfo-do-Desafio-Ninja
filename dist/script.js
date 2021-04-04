@@ -173,12 +173,12 @@ function obterAtributo() {
 function jogar() {
   var divResultado = document.getElementById("resultado")
   var atributoSelecionado = obterAtributo()
-//  var ganhou = new Audio('Sonic 3 & Knuckles _Act Clear_ music request.ogg');
+  var ganhou = new Audio('./som/Sonic 3 & Knuckles _Act Clear_ music request.ogg');
   
   if (cartaJog.atributos[atributoSelecionado] > cartaMaq.atributos[atributoSelecionado]) {
     var htmlResultado = "<p class='resultado-final'>Venceu a carta da máquina!</p>"
     pontosJog++
-//    ganhou.play()
+    ganhou.play()
   } else if (cartaJog.atributos[atributoSelecionado] < cartaMaq.atributos[atributoSelecionado]) {
     var htmlResultado = "<p class='resultado-final'>Perdeu. A carta da máquina é maior.</p>"
     pontosMaq++
